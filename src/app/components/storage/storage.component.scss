@@ -1,0 +1,96 @@
+@import '~@angular/material/theming';
+
+* {
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+td {
+    padding-right: 15px;
+}
+
+.h {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.clickable {
+    cursor: pointer;
+
+    &:hover {
+        @include mat-elevation(10);
+        box-shadow: 8px 6px 10px 0 rgba(255, 255, 255, 0.486);
+    }
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.product-card {
+    color: aqua;
+    box-shadow: 8px 6px 10px 0 rgba(255, 255, 255, 0.486);
+}
+
+.eyeglass {
+    border-radius: 20px;
+    background-size: 300px 180px;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/eyeglass.jpg');
+}
+
+.shirts {
+    border-radius: 20px;
+    background-size: 300px 180px;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/shirts.jpg');
+}
+
+.pants {
+    border-radius: 20px;
+    background-size: 300px 180px;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/pants.jpg');
+}
+
+.footwear {
+    border-radius: 20px;
+    background-size: 300px 180px;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/footwear.jpg');
+}
+
+mat-card {
+    border-radius: 20px;
+    margin-top: 70px;
+    box-shadow: 8px 6px 10px 0 rgba(212, 212, 212, 0.486);
+    padding: 60px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

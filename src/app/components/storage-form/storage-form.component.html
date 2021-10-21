@@ -1,0 +1,76 @@
+<mat-toolbar
+  ><h1>Storage Form</h1>
+  <mat-card (click)="navigateHome()" matRipple class="clickable"
+    ><h1>Home</h1></mat-card
+  >
+  <mat-card (click)="navigate()" matRipple class="clickable"
+    ><h1>Storage Form</h1></mat-card
+  ></mat-toolbar
+>
+<mat-card class="rod">
+  <div>
+    <form>
+      <div>
+        <label>Item Id</label>
+        <mat-form-field appearance="outline" color="primary">
+          <input
+            matInput
+            placeholder="Enter a Item Id"
+            name="itemId"
+            [(ngModel)]="itemId"
+            (ngModelChange)="validate()"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <label>Item Name</label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter a Item Name"
+            name="itemName"
+            [(ngModel)]="itemName"
+            (ngModelChange)="validate()"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <label>Item Price</label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter a Item Price"
+            name="itemPrice"
+            [(ngModel)]="itemPrice"
+            (ngModelChange)="validate()"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <label>Category</label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter a Category"
+            name="category"
+            [(ngModel)]="category"
+            (ngModelChange)="validate()"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <label>Description</label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Enter a Description"
+            name="description"
+            [(ngModel)]="description"
+            (ngModelChange)="validate()"
+          />
+        </mat-form-field>
+      </div>
+    </form>
+    <button mat-raised-button (click)="saveStore()">Save</button>
+  </div>
+</mat-card>

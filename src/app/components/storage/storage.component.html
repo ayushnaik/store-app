@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="column">
+    <div>
+      <mat-card
+        (click)="fetchCategory(this.Onswitch(1))"
+        matRipple
+        class="clickable eyeglass"
+        ><h1
+          style="
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+          "
+        >
+          Eye Wear
+        </h1></mat-card
+      >
+    </div>
+  </div>
+  <div class="column">
+    <div>
+      <mat-card
+        (click)="fetchCategory(this.Onswitch(2))"
+        matRipple
+        class="clickable shirts"
+        ><h1
+          style="
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+          "
+        >
+          Shirts
+        </h1></mat-card
+      >
+    </div>
+  </div>
+  <div class="column">
+    <div>
+      <mat-card
+        (click)="fetchCategory(this.Onswitch(3))"
+        matRipple
+        class="clickable pants"
+        ><h1
+          style="
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+          "
+        >
+          Pants
+        </h1></mat-card
+      >
+    </div>
+  </div>
+  <div class="column">
+    <div>
+      <mat-card
+        (click)="fetchCategory(this.Onswitch(4))"
+        matRipple
+        class="clickable footwear"
+        ><h1
+          style="
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+          "
+        >
+          Footwear
+        </h1></mat-card
+      >
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let store of stores">
+  <mat-card class="product-card">
+    <h1 class="h">{{ store.itemName }}</h1>
+    <span>
+      <tr>
+        <th>Item Id:</th>
+        <td>{{ store.itemId }}</td>
+        <th>Item Price:</th>
+        <td>{{ store.itemPrice }}</td>
+        <th>Category:</th>
+        <td>{{ store.category }}</td>
+        <th>Description:</th>
+        <td>{{ store.description }}</td>
+      </tr>
+    </span>
+  </mat-card>
+</div>
